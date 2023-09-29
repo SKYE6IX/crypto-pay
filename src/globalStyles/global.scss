@@ -1,0 +1,18 @@
+$font-family: var(--font-inter);
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: $font-family, sans-serif;
+  font-style: normal;
+}
