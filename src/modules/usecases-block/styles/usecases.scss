@@ -1,0 +1,116 @@
+@use '@/globalStyles//variables' as *;
+
+.usecases-block {
+  width: 100%;
+  padding: 120px 0px;
+}
+.usecases-block__inner-container {
+  height: 880px;
+  width: 100%;
+  padding: 196px 200px;
+  background: $dark-blue-color;
+}
+.usecases-block__content {
+  display: flex;
+  align-items: center;
+}
+.usecases-block__images {
+  margin-right: 122px;
+  img {
+    transition: all ease-in-out 5s;
+  }
+}
+.usecases-block__description {
+  margin-right: 83px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.usecases-block__title {
+  width: 488px;
+  h2 {
+    margin: 0px;
+    font-size: 3.5rem;
+    font-weight: 629;
+    line-height: 61.6px;
+    letter-spacing: -1.68px;
+    color: $text-blue-color;
+    span {
+      line-height: 61.6px;
+      letter-spacing: -1.68px;
+      color: $white-color;
+    }
+  }
+}
+.usecases-block__base-text {
+  width: 488px;
+  p {
+    margin: 0px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 24px;
+    color: $white-color;
+  }
+}
+.usecases-block__button {
+  button {
+    border: 0px;
+    border-radius: 900px;
+    padding: 18px 42px;
+    background-color: $text-blue-color;
+    color: $white-color;
+    font-family: $font-inter;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 21.6px;
+    cursor: pointer;
+  }
+}
+.usecases-block__pagination {
+  height: 408px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.usecases-block__pagination-number {
+  span {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-transform: uppercase;
+    color: $white-color;
+  }
+}
+.stick-container {
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+%stick-style {
+  width: 4px;
+  height: 108.66667px;
+  border-radius: 90px;
+  cursor: pointer;
+}
+.usecases-block__pagination-stick {
+  @extend %stick-style;
+  background-color: $grey-color;
+}
+.usecases-block__pagination-stick_active {
+  @extend %stick-style;
+  position: absolute;
+  background-color: $text-blue-color;
+  transition: all ease-in 0.3s;
+}
+.usecases-block__pagination-stick_active_first {
+  transform: translateY(0px);
+}
+.usecases-block__pagination-stick_active_second {
+  transform: translateY(118px);
+}
+.usecases-block__pagination-stick_active_third {
+  transform: translateY(236px);
+}
