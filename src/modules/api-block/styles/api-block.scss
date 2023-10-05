@@ -1,0 +1,75 @@
+@use '@/globalStyles//variables' as *;
+
+.api-block {
+  width: 100%;
+  padding: 120px 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.api-block__inner-container {
+  width: 1200px;
+  height: 550px;
+  border-radius: 40px;
+  background: linear-gradient(233deg, #9fccfa -20.48%, #0974f1 97.38%);
+  display: flex;
+}
+.api-block__header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  margin-left: 80px;
+}
+
+.api-block__header-text-title {
+  h2 {
+    margin: 0px;
+    font-size: 3.5rem;
+    font-weight: 629;
+    line-height: 61.6px;
+    letter-spacing: -1.68px;
+    color: $white-color;
+  }
+}
+.api-block__header-text-base-text {
+  p {
+    margin: 0px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 24px;
+    color: $white-color;
+  }
+}
+.api-block__header-text-button {
+  z-index: 2;
+  button {
+    background: inherit;
+    padding: 18px 42px;
+    border-radius: 900px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: $white-color;
+    font-family: $font-inter;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 21.6px;
+    cursor: pointer;
+  }
+}
+.api-block-image {
+  margin-left: auto;
+  position: relative;
+  //   overflow: clip;
+  svg {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    fill: linear-gradient(
+      76deg,
+      rgba(255, 255, 255, 0.63) 59.31%,
+      rgba(255, 255, 255, 0) 94.29%
+    );
+    mix-blend-mode: overlay;
+    filter: blur(57px);
+  }
+}
