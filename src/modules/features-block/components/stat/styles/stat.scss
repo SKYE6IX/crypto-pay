@@ -1,0 +1,53 @@
+@use '@/globalStyles//variables' as *;
+
+.stat {
+  width: 692px;
+  height: 748px;
+  padding: 42px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 32px;
+  background: $backgroud-light;
+}
+
+.stat__images {
+  width: 580px;
+  height: 526px;
+  position: relative;
+  img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 580px;
+    height: 526px;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 32px;
+    transition: all ease-in-out 0.5s;
+  }
+}
+.stat__header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  h4 {
+    margin: 0px;
+    font-size: 2.625rem;
+    font-weight: 629;
+    line-height: 46.2px;
+    letter-spacing: -1.26px;
+    color: $text-dark-color;
+  }
+  p {
+    margin: 0px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(17, 17, 17, 0.8);
+    span {
+      color: $text-blue-color;
+      font-weight: 500;
+    }
+  }
+}

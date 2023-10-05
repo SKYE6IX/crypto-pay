@@ -1,0 +1,27 @@
+@use '@/globalStyles//variables' as *;
+
+%flex-style {
+  display: flex;
+  gap: 20px;
+}
+
+.feature-block {
+  width: 100%;
+  height: 1695px;
+  padding: 24px 200px;
+  @extend %flex-style;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-block__middle {
+  @extend %flex-style;
+  flex-direction: row;
+  & .feature-block__middle-wrapper {
+    @extend %flex-style;
+    flex-direction: column;
+  }
+}
+.feature-block__last {
+  @extend %flex-style;
+}

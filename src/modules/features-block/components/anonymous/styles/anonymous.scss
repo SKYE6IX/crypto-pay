@@ -1,0 +1,63 @@
+@use '@/globalStyles//variables' as *;
+
+%flex-styles {
+  display: flex;
+  flex-direction: column;
+}
+
+.anonymous {
+  @extend %flex-styles;
+  gap: 20px;
+  width: 488px;
+  height: 510px;
+  padding: 42px;
+  border-radius: 32px;
+  background: $backgroud-light;
+}
+.anonymous__images {
+  @extend %flex-styles;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 32px;
+  background: linear-gradient(233deg, #9fccfa -20.48%, #0974f1 97.38%);
+  position: relative;
+}
+
+.anonymous__images-wrapper {
+  position: absolute;
+  width: 356.849px;
+  height: 126px;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.anonymous__header-texts {
+  @extend %flex-styles;
+  gap: 20px;
+  h3 {
+    margin: 0px;
+    font-size: 2.625rem;
+    font-weight: 629;
+    line-height: 46.2px;
+    letter-spacing: -1.26px;
+    color: $text-dark-color;
+  }
+  p {
+    margin: 0px;
+    color: rgba(17, 17, 17, 0.8);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 24px;
+    b,
+    span {
+      font-weight: 500;
+    }
+    span {
+      color: $text-blue-color;
+    }
+  }
+}
