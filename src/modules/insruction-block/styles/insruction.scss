@@ -1,0 +1,128 @@
+@use '@/globalStyles//variables' as *;
+
+.instructuon {
+  width: 100%;
+  padding: 120px 200px;
+  margin-top: 120px;
+  background: $backgroud-light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.instruction__header {
+  h2 {
+    margin: 0px;
+    color: rgba(37, 37, 37, 1);
+    font-size: 3.5rem;
+    font-weight: 629;
+    line-height: 61.6px;
+    letter-spacing: -1.68px;
+    span {
+      color: $text-blue-color;
+    }
+  }
+}
+
+.instruction__step {
+  display: flex;
+  gap: 122px;
+}
+.instruction__step-one {
+  & .instruction__step-image {
+    background: linear-gradient(297deg, #8ec5fc 8.25%, #e0c3fc 91.76%);
+  }
+}
+.instruction__step-two {
+  flex-direction: row-reverse;
+  & .instruction__step-image {
+    background: linear-gradient(207deg, #fcb69f 6.91%, #ffecd2 92.45%);
+  }
+  & .instruction__step-header-steps-list {
+    p {
+      color: $text-blue-color;
+    }
+  }
+}
+.instruction__step-three {
+  & .instruction__step-image {
+    background: linear-gradient(0deg, #c2e9fb -16.6%, #a1c4fd 106.15%);
+  }
+}
+.instruction__step-header {
+  width: 488px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.instruction__step-header-head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.instruction__step-header-number {
+  display: flex;
+  width: 64px;
+  padding: 9px 22.004px 9px 20.996px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 900px;
+  background: linear-gradient(220deg, #010417 10.26%, #2b333f 84.25%),
+    linear-gradient(46deg, #000 15.89%, #434343 171.16%);
+  box-shadow:
+    0px 0px 8px 0px rgba(182, 186, 191, 0.04),
+    0px 2px 3px 0px rgba(0, 0, 0, 0.02);
+  span {
+    font-size: 2.625rem;
+    font-weight: 629;
+    line-height: 46.2px;
+    letter-spacing: -1.26px;
+    color: $white-color;
+  }
+}
+.instruction__step-header-title {
+  h3 {
+    margin: 0px;
+    font-size: 2.625rem;
+    font-weight: 629;
+    line-height: 46.2px;
+    letter-spacing: -1.26px;
+    color: $text-dark-color;
+  }
+}
+.instruction__step-header-sub-title {
+  p {
+    margin: 0px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(17, 17, 17, 0.8);
+  }
+}
+.instruction__step-header-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  p {
+    margin: 0px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 24px;
+    span {
+      color: $text-blue-color;
+      font-weight: 500;
+    }
+  }
+}
+.instruction__step-image {
+  width: 590px;
+  height: 488px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    border-radius: 16.8px;
+  }
+}
