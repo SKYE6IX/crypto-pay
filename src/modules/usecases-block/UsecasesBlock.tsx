@@ -20,6 +20,7 @@ const UsecasesBlock = () => {
               alt="usecases-image"
             />
           </div>
+
           <div className="usecases-block__description">
             <div className="usecases-block__title">
               {descriptionData[currentIndex].title}
@@ -31,6 +32,7 @@ const UsecasesBlock = () => {
               <button>Open API Docs</button>
             </div>
           </div>
+
           <div className="usecases-block__pagination">
             <div className="usecases-block__pagination-number">
               <span>{descriptionData[currentIndex].pagination_number}</span>

@@ -19,7 +19,7 @@ export const descriptionData: DescriptionData[] = [
         <br />
         Auto Sales:
         <br />
-        <span>Boost conversion</span>
+        <span> Boost conversion</span>
       </h2>
     ),
     base_text: (
@@ -38,7 +38,7 @@ export const descriptionData: DescriptionData[] = [
         <br />
         integration:
         <br />
-        <span>Seamless access</span>
+        <span> Seamless access</span>
       </h2>
     ),
     base_text: (
@@ -57,7 +57,7 @@ export const descriptionData: DescriptionData[] = [
         <br />
         customization:
         <br />
-        <span>with Webhooks</span>
+        <span> with Webhooks</span>
       </h2>
     ),
     base_text: (

@@ -3,21 +3,39 @@
 .usecases-block {
   width: 100%;
   padding: 120px 0px;
+  @media screen and (max-width: $breakpoint-medium) {
+    padding: 80px 0px;
+  }
 }
 .usecases-block__inner-container {
   height: 880px;
   width: 100%;
   padding: 196px 200px;
   background: $dark-blue-color;
+  @media screen and (max-width: $breakpoint-medium) {
+    padding: 32px 20px;
+    height: 718px;
+  }
 }
 .usecases-block__content {
   display: flex;
   align-items: center;
+  @media screen and (max-width: $breakpoint-medium) {
+    flex-direction: column;
+    gap: 32px;
+  }
 }
 .usecases-block__images {
   margin-right: 122px;
   img {
     transition: all ease-in-out 5s;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 335px;
+    height: 335px;
+    margin: 0px;
   }
 }
 .usecases-block__description {
@@ -25,6 +43,10 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  @media screen and (max-width: $breakpoint-medium) {
+    margin: 0px;
+    gap: 24px;
+  }
 }
 .usecases-block__title {
   width: 488px;
@@ -36,9 +58,20 @@
     letter-spacing: -1.68px;
     color: $text-blue-color;
     span {
-      line-height: 61.6px;
       letter-spacing: -1.68px;
       color: $white-color;
+    }
+  }
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 335px;
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      line-height: 35.2px;
+      letter-spacing: -0.96px;
+      br {
+        display: none;
+      }
     }
   }
 }
@@ -50,6 +83,18 @@
     font-weight: 400;
     line-height: 24px;
     color: $white-color;
+  }
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 335px;
+    height: 66px;
+    p {
+      text-align: center;
+      font-size: 1.125rem;
+      line-height: 21.6px;
+      br {
+        display: none;
+      }
+    }
   }
 }
 .usecases-block__button {
@@ -65,6 +110,15 @@
     line-height: 21.6px;
     cursor: pointer;
   }
+  @media screen and (max-width: $breakpoint-medium) {
+    margin-top: 12px;
+    button {
+      width: 335px;
+      padding: 12px 32px;
+      font-size: 1.125rem;
+      line-height: 21.6px;
+    }
+  }
 }
 .usecases-block__pagination {
   height: 408px;
@@ -72,6 +126,12 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 335px;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 .usecases-block__pagination-number {
   span {
@@ -82,23 +142,34 @@
     color: $white-color;
   }
 }
+
 .stick-container {
   height: 100%;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  @media screen and (max-width: $breakpoint-medium) {
+    flex-direction: row;
+    width: 100%;
+  }
 }
+
 %stick-style {
   width: 4px;
   height: 108.66667px;
   border-radius: 90px;
   cursor: pointer;
+  @media screen and (max-width: $breakpoint-medium) {
+    height: 4px;
+    width: 82.333px;
+  }
 }
 .usecases-block__pagination-stick {
   @extend %stick-style;
   background-color: $grey-color;
 }
+
 .usecases-block__pagination-stick_active {
   @extend %stick-style;
   position: absolute;
@@ -107,10 +178,19 @@
 }
 .usecases-block__pagination-stick_active_first {
   transform: translateY(0px);
+  @media screen and (max-width: $breakpoint-medium) {
+    transform: translateX(0px);
+  }
 }
 .usecases-block__pagination-stick_active_second {
   transform: translateY(118px);
+  @media screen and (max-width: $breakpoint-medium) {
+    transform: translateX(95.5px);
+  }
 }
 .usecases-block__pagination-stick_active_third {
   transform: translateY(236px);
+  @media screen and (max-width: $breakpoint-medium) {
+    transform: translateX(191px);
+  }
 }
