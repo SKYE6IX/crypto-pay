@@ -12,12 +12,12 @@ const Page = () => {
     <div className="page">
       <Header />
       <HeroBlock />
-      <UsecasesBlock />
+      {/* <UsecasesBlock />
       <FeatureBlock />
       <Insruction />
       <ApiBlock />
       <CommunityBlock />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };
