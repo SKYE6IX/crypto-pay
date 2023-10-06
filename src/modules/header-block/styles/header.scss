@@ -38,6 +38,17 @@
     line-height: 24px;
   }
 }
+
+.header__button-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.header__theme-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
 .header__button {
   border: none;
   border-radius: 900px;

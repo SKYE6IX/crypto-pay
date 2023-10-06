@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import cryptoLogo from './crypto-pay-logo.jpeg';
+import cryptoLogo from './assests/crypto-pay-logo.jpeg';
+import DarkModeIcon from './assests/dark-mode-icon.svg';
 import './styles/header.scss';
 
 const Header = () => {
@@ -17,6 +18,9 @@ const Header = () => {
           </ul>
         </div>
         <div className="header__button-wrapper">
+          <button className="header__theme-button">
+            <Image src={DarkModeIcon} alt="dark-mode-btn" />
+          </button>
           <button className="header__button">Get started</button>
         </div>
       </div>
