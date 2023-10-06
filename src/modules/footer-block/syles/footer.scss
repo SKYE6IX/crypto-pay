@@ -1,0 +1,7 @@
+@use '@/globalStyles//variables' as *;
+
+.footer {
+  width: 100%;
+  padding: 120px 200px 40px 200px;
+  background: $dark-blue-color;
+}
