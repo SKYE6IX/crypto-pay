@@ -11,10 +11,17 @@
   display: flex;
   align-items: center;
   width: 1200px;
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 335px;
+  }
 }
 .header__logo-wrapper {
   width: 64px;
   height: 64px;
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 46px;
+    height: 46px;
+  }
   img {
     max-width: 100%;
     max-height: 100%;
@@ -26,6 +33,9 @@
   width: 844px;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: $breakpoint-medium) {
+    display: none;
+  }
 }
 .header__nav-menu_list {
   display: flex;
@@ -38,16 +48,22 @@
     line-height: 24px;
   }
 }
-
 .header__button-wrapper {
   display: flex;
   gap: 8px;
   align-items: center;
+  @media screen and (max-width: $breakpoint-medium) {
+    margin-left: auto;
+  }
 }
 .header__theme-button {
   border: none;
   background: none;
   cursor: pointer;
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 40px;
+    height: 40px;
+  }
 }
 .header__button {
   border: none;
@@ -60,4 +76,9 @@
   line-height: 24px;
   color: $text-deep-blue-color;
   cursor: pointer;
+  @media screen and (max-width: $breakpoint-medium) {
+    padding: 12px 32px;
+    font-size: 1.125rem;
+    line-height: 21.6px;
+  }
 }
