@@ -9,7 +9,13 @@
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  @media screen and (max-width: $breakpoint-medium) {
+    margin-top: 0px;
+    padding: 32px 20px;
+    gap: 24px;
+  }
 }
+
 .instruction__header {
   h2 {
     margin: 0px;
@@ -22,11 +28,27 @@
       color: $text-blue-color;
     }
   }
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 250px;
+    h2 {
+      font-size: 2rem;
+      font-weight: 550;
+      line-height: 35.2px;
+      letter-spacing: -0.96px;
+      text-align: center;
+    }
+  }
 }
 
 .instruction__step {
   display: flex;
   gap: 122px;
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 335px;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 16px;
+  }
 }
 .instruction__step-one {
   & .instruction__step-image {
@@ -38,10 +60,25 @@
   & .instruction__step-image {
     background: linear-gradient(207deg, #fcb69f 6.91%, #ffecd2 92.45%);
   }
+  & .instruction__step-header-title {
+    h3 {
+      br {
+        display: none;
+      }
+      @media screen and (max-width: $breakpoint-medium) {
+        br {
+          display: block;
+        }
+      }
+    }
+  }
   & .instruction__step-header-steps-list {
     p {
       color: $text-blue-color;
     }
+  }
+  @media screen and (max-width: $breakpoint-medium) {
+    flex-direction: column-reverse;
   }
 }
 .instruction__step-three {
@@ -49,17 +86,26 @@
     background: linear-gradient(0deg, #c2e9fb -16.6%, #a1c4fd 106.15%);
   }
 }
+
 .instruction__step-header {
   width: 488px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 100%;
+    flex-direction: row;
+    gap: 16px;
+  }
 }
-.instruction__step-header-head {
+.instruction__step-header-text {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media screen and (max-width: $breakpoint-medium) {
+    gap: 16px;
+  }
 }
 .instruction__step-header-number {
   display: flex;
@@ -80,6 +126,17 @@
     letter-spacing: -1.26px;
     color: $white-color;
   }
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 36px;
+    height: 36px;
+    padding: 5px 12px;
+    span {
+      font-size: 1.5rem;
+      font-weight: 550;
+      line-height: 26.4px;
+      letter-spacing: -0.72px;
+    }
+  }
 }
 .instruction__step-header-title {
   h3 {
@@ -90,6 +147,14 @@
     letter-spacing: -1.26px;
     color: $text-dark-color;
   }
+  @media screen and (max-width: $breakpoint-medium) {
+    h3 {
+      font-size: 1.75rem;
+      font-weight: 550;
+      line-height: 30.8px;
+      letter-spacing: -0.84px;
+    }
+  }
 }
 .instruction__step-header-sub-title {
   p {
@@ -98,6 +163,16 @@
     font-weight: 400;
     line-height: 24px;
     color: rgba(17, 17, 17, 0.8);
+  }
+  @media screen and (max-width: $breakpoint-medium) {
+    p {
+      font-size: 1.125rem;
+      font-weight: 350;
+      line-height: 21.6px;
+      br {
+        display: none;
+      }
+    }
   }
 }
 .instruction__step-header-steps-list {
@@ -114,6 +189,16 @@
       font-weight: 500;
     }
   }
+  @media screen and (max-width: $breakpoint-medium) {
+    p {
+      font-size: 1.125rem;
+      font-weight: 350;
+      line-height: 21.6px;
+      span {
+        font-weight: 450;
+      }
+    }
+  }
 }
 .instruction__step-image {
   width: 590px;
@@ -124,5 +209,13 @@
   justify-content: center;
   img {
     border-radius: 16.8px;
+  }
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 335px;
+    height: 277px;
+    border-radius: 24px;
+    img {
+      width: 283px;
+    }
   }
 }
