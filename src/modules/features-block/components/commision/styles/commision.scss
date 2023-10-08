@@ -9,6 +9,12 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 335px;
+    height: 320px;
+    padding: 32px;
+    gap: 24px;
+  }
 }
 .commission__image {
   height: 100%;
@@ -16,6 +22,10 @@
   justify-content: center;
   padding-top: 37px;
   position: relative;
+  @media screen and (max-width: $breakpoint-medium) {
+    padding: 0px;
+    align-items: center;
+  }
 }
 .animate-button {
   height: 62px;
@@ -38,15 +48,13 @@
     font-weight: 500;
     line-height: 26.4px;
   }
+  @media screen and (max-width: $breakpoint-medium) {
+  }
 }
 .animate-cursor {
   position: absolute;
   width: 45.802px;
   height: 48.738px;
-  // // right: 58.51px;
-  // right: 37.02px;
-  // // bottom: 22.79px;
-  // bottom: 5.59px;
   img {
     max-width: 100%;
     max-height: 100%;
@@ -72,6 +80,26 @@
     span {
       color: $text-blue-color;
       font-weight: 500;
+    }
+  }
+  @media screen and (max-width: $breakpoint-medium) {
+    gap: 16px;
+    h3 {
+      font-size: 1.75rem;
+      font-weight: 550;
+      line-height: 30.8px;
+      letter-spacing: -0.84px;
+    }
+    p {
+      font-size: 1.125rem;
+      font-weight: 350;
+      line-height: 21.6px;
+      span {
+        font-weight: 450;
+      }
+      br {
+        display: none;
+      }
     }
   }
 }

@@ -3,9 +3,11 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import TreeIcon from '../../assests/tree-icon.svg';
 import CursorIcon from '../../assests/cursor-icon.svg';
+import { useMediaQuery } from '@/hook/useMediaQuery';
 import './styles/commision.scss';
 
 const Commission = () => {
+  const isSmall = useMediaQuery('(max-width:768px)');
   return (
     <div className="commission">
       <div className="commission__image">
@@ -29,11 +31,16 @@ const Commission = () => {
           <Image src={TreeIcon} alt="tree-icon" />
           <span>Create App</span>
         </motion.div>
+
         <motion.div
           className="animate-cursor"
           animate={{
-            right: ['37.02px', '58.51px', '37.02px'],
-            bottom: ['5.59px', '22.79px', '5.59px'],
+            right: isSmall
+              ? ['-10px', '5.51px', '-10px']
+              : ['37.02px', '58.51px', '37.02px'],
+            bottom: isSmall
+              ? ['-20px', '0.79px', '-20px']
+              : ['5.59px', '22.79px', '5.59px'],
           }}
           transition={{
             duration: 2,

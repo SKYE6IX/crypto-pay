@@ -8,6 +8,7 @@ import VerificationImageTwo from '../../assests/verification-image-two.png';
 import VerificationImageThree from '../../assests/verification-image-three.png';
 import VerificationImageFour from '../../assests/verification-image-four.png';
 import { getCurrentIndex, animateFunction } from '../../helper';
+import { useMediaQuery } from '@/hook/useMediaQuery';
 import './style/verification.scss';
 
 interface VerificationListType {
@@ -30,8 +31,9 @@ const verificationMsgList: VerificationListType[] = [
 ];
 
 const Verification = () => {
+  const isSmall = useMediaQuery('(max-width:768px)');
   const { currentIndex } = getCurrentIndex(verificationMsgList);
-  const { map, size, activeIndex } = animateFunction(verificationMsgList);
+  // const { map, size, activeIndex } = animateFunction(verificationMsgList);
   return (
     <div className="verification">
       <div className="verification__images">
@@ -47,8 +49,20 @@ const Verification = () => {
               key={index}
               className="verification__image-messages"
               animate={{
-                width: currentIndex === index ? '' : '380px',
-                translateY: currentIndex === index ? ['-1px', '10px'] : '-1px',
+                width: isSmall
+                  ? currentIndex === index
+                    ? ''
+                    : '195px'
+                  : currentIndex === index
+                  ? ''
+                  : '380px',
+                translateY: isSmall
+                  ? currentIndex === index
+                    ? ['-1px', '7px']
+                    : '-1px'
+                  : currentIndex === index
+                  ? ['-1px', '10px']
+                  : '-1px',
                 zIndex: currentIndex === index ? 2 : 1,
                 opacity: currentIndex === index ? [0.5, 1] : 0.5,
               }}

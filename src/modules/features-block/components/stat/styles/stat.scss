@@ -9,6 +9,12 @@
   gap: 24px;
   border-radius: 32px;
   background: $backgroud-light;
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 335px;
+    height: auto;
+    padding: 32px;
+    border-radius: 24px;
+  }
 }
 
 .stat__images {
@@ -19,12 +25,18 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 580px;
-    height: 526px;
     max-width: 100%;
     max-height: 100%;
     border-radius: 32px;
     transition: all ease-in-out 0.5s;
+  }
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 271px;
+    height: 281px;
+    img {
+      border-radius: 24px;
+      object-fit: cover;
+    }
   }
 }
 .stat__header-text {
@@ -48,6 +60,23 @@
     span {
       color: $text-blue-color;
       font-weight: 500;
+    }
+  }
+  @media screen and (max-width: $breakpoint-medium) {
+    gap: 16px;
+    h4 {
+      font-size: 1.75rem;
+      font-weight: 550;
+      line-height: 30.8px;
+      letter-spacing: -0.84px;
+    }
+    p {
+      font-size: 1.125rem;
+      font-weight: 350;
+      line-height: 21.6px;
+      span {
+        font-weight: 400;
+      }
     }
   }
 }

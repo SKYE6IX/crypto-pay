@@ -1,5 +1,4 @@
 'use client';
-import { useState, useEffect, useMemo, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import UsdtIcon from '../../assests/usdt-icon.png';
@@ -8,6 +7,7 @@ import TonIcon from '../../assests/ton-icon.png';
 import RightArrowIcon from '../../assests/right-arrow-icon.svg';
 import LeftArrowIcon from '../../assests/left-arrow-icon.svg';
 import { animateFunction } from '../../helper';
+import { useMediaQuery } from '@/hook/useMediaQuery';
 import './styles/exchange.scss';
 
 interface CurrenciesListType {
@@ -30,6 +30,7 @@ const currenciesList: CurrenciesListType[] = [
 ];
 const Exchange = () => {
   const { map, size } = animateFunction(currenciesList);
+  const isSmall = useMediaQuery('(max-width:768px)');
 
   return (
     <div className="exchange">
@@ -37,12 +38,13 @@ const Exchange = () => {
         <div className="exchange__currencies">
           {currenciesList.map((currency, index) => {
             const factor = size - 1 - map.get(index)!;
+
             return (
               <motion.div
                 key={index}
                 className="currency-wrapper"
                 animate={{
-                  left: 0 - 0.7 * factor * 62,
+                  left: isSmall ? 0 - 0.7 * factor * 42 : 0 - 0.7 * factor * 62,
                   zIndex: map.get(index),
                 }}
                 transition={{
@@ -62,6 +64,7 @@ const Exchange = () => {
           <Image src={LeftArrowIcon} alt="left-arrow-icon" />
         </div>
       </div>
+
       <div className="exchange__header-text">
         <h3>
           Real-time <br />

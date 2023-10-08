@@ -11,6 +11,11 @@
   border-radius: 40px;
   background-color: $backgroud-light;
   gap: 42px;
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 100%;
+    padding: 32px;
+    flex-direction: column-reverse;
+  }
 }
 .currencies__header-texts {
   @extend %flex-styles;
@@ -34,11 +39,35 @@
       color: $text-blue-color;
     }
   }
+  @media screen and (max-width: $breakpoint-medium) {
+    gap: 16px;
+    h2 {
+      width: 271px;
+      font-size: 1.75rem;
+      line-height: 30.8px;
+      letter-spacing: -0.84px;
+      font-weight: 550;
+    }
+    p {
+      width: 271px;
+      font-size: 1.125rem;
+      line-height: 21.6px;
+      font-weight: 350;
+      span {
+        font-weight: 400;
+      }
+    }
+  }
 }
 .currencies__icons-wrapper {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 271px;
+    height: 122px;
+    flex-wrap: wrap;
+  }
 }
 .currencies__icon-item {
   @extend %flex-styles;
@@ -54,5 +83,14 @@
     font-weight: 500;
     line-height: 16.8px;
     text-transform: uppercase;
+  }
+  @media screen and (max-width: $breakpoint-medium) {
+    img {
+      width: 56px;
+      height: 56px;
+    }
+    span {
+      display: none;
+    }
   }
 }

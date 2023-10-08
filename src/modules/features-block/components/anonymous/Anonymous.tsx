@@ -6,6 +6,7 @@ import AnonymousImageTwo from '../../assests/anonymous-image-two.png';
 import AnonymousImageThree from '../../assests/anonymous-image-three.png';
 import AnonymousImageFour from '../../assests/anonymous-image-four.png';
 import { getCurrentIndex } from '../../helper';
+import { useMediaQuery } from '@/hook/useMediaQuery';
 import './styles/anonymous.scss';
 
 interface AnonymousListType {
@@ -27,6 +28,7 @@ const anonymousMsgList: AnonymousListType[] = [
 ];
 
 const Anonymous = () => {
+  const isSmall = useMediaQuery('(max-width:768px)');
   const { currentIndex } = getCurrentIndex(anonymousMsgList);
   return (
     <div className="anonymous">
@@ -35,13 +37,21 @@ const Anonymous = () => {
           <motion.div
             key={index}
             className="anonymous__images-wrapper"
-            initial={{
-              translateY: '0px',
-              zIndex: 1,
-            }}
             animate={{
-              width: currentIndex === index ? '' : '340px',
-              translateY: currentIndex === index ? ['-1px', '10px'] : '-1px',
+              width: isSmall
+                ? currentIndex === index
+                  ? ''
+                  : '215px'
+                : currentIndex === index
+                ? ''
+                : '340px',
+              translateY: isSmall
+                ? currentIndex === index
+                  ? ['-1px', '5px']
+                  : '-1px'
+                : currentIndex === index
+                ? ['-1px', '10px']
+                : '-1px',
               zIndex: currentIndex === index ? 2 : 1,
               opacity: currentIndex === index ? [0.5, 1] : 0.5,
             }}
