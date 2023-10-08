@@ -6,6 +6,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: $breakpoint-medium) {
+    padding: 100px 20px;
+  }
 }
 .api-block__inner-container {
   width: 1200px;
@@ -13,6 +16,23 @@
   border-radius: 40px;
   background: linear-gradient(233deg, #9fccfa -20.48%, #0974f1 97.38%);
   display: flex;
+  position: relative;
+  align-items: center;
+  @media screen and (max-width: $breakpoint-medium) {
+    flex-direction: column-reverse;
+    width: 335px;
+    height: 514px;
+    border-radius: 24px;
+    background: linear-gradient(220deg, #9fccfa -32.5%, #0974f1 147.07%),
+      #eceff4;
+  }
+}
+.api-block__header-wrapper {
+  position: relative;
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 271px;
+    height: 195px;
+  }
 }
 .api-block__header-text {
   display: flex;
@@ -20,8 +40,14 @@
   gap: 32px;
   justify-content: center;
   margin-left: 80px;
+  @media screen and (max-width: $breakpoint-medium) {
+    margin: 0px;
+    width: 271px;
+    gap: 24px;
+    position: absolute;
+    top: -20px;
+  }
 }
-
 .api-block__header-text-title {
   h2 {
     margin: 0px;
@@ -31,6 +57,14 @@
     letter-spacing: -1.68px;
     color: $white-color;
   }
+  @media screen and (max-width: $breakpoint-medium) {
+    h2 {
+      font-size: 2rem;
+      font-weight: 550;
+      line-height: 35.2px;
+      letter-spacing: -0.96px;
+    }
+  }
 }
 .api-block__header-text-base-text {
   p {
@@ -39,6 +73,16 @@
     font-weight: 400;
     line-height: 24px;
     color: $white-color;
+  }
+  @media screen and (max-width: $breakpoint-medium) {
+    p {
+      font-size: 1.125rem;
+      font-weight: 350;
+      line-height: 21.6px;
+      br {
+        display: none;
+      }
+    }
   }
 }
 .api-block__header-text-button {
@@ -55,21 +99,26 @@
     line-height: 21.6px;
     cursor: pointer;
   }
+  @media screen and (max-width: $breakpoint-medium) {
+    button {
+      text-align: center;
+      padding: 12px 32px;
+      font-size: 1.125rem;
+      font-weight: 450;
+      line-height: 21.6px;
+      width: 100%;
+    }
+  }
 }
 .api-block-image {
   margin-left: auto;
   position: relative;
-  //   overflow: clip;
-  svg {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    fill: linear-gradient(
-      76deg,
-      rgba(255, 255, 255, 0.63) 59.31%,
-      rgba(255, 255, 255, 0) 94.29%
-    );
-    mix-blend-mode: overlay;
-    filter: blur(57px);
+  @media screen and (max-width: $breakpoint-medium) {
+    margin: 0px;
   }
+}
+.gradient-background {
+  position: absolute;
+  top: 0px;
+  mix-blend-mode: overlay;
 }
