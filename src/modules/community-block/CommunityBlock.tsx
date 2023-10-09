@@ -32,7 +32,7 @@ const CommunityBlock = () => {
           </div>
           <div className="community-block__icons-wrapper">
             <Image src={PythonIcon} alt="pyhton-icon" />
-            <span>aiocryptopay</span>
+            <span>aiocrypto pay</span>
           </div>
           <div className="community-block__icons-wrapper">
             <Image src={GoIcon} alt="go-icon" />
