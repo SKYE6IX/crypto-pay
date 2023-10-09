@@ -1,3 +1,6 @@
+@use '@/globalStyles//variables' as *;
+
 .page {
   overflow: hidden;
+  background: $page-background-light-mode;
 }

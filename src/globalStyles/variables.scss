@@ -11,7 +11,10 @@ $backgroud-light: rgba(247, 249, 251, 1);
 $font-inter: var(--font-inter);
 
 // break-point
-
 $breakpoint-small: 480px;
 $breakpoint-medium: 768px;
 $breakpoint-large: 1024px;
+
+// theme color
+$page-background-dark-mode: #0d0d12;
+$page-background-light-mode: #fff;

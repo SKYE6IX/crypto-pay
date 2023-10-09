@@ -7,7 +7,7 @@ import VerificationImageOne from '../../assests/verification-image-one.png';
 import VerificationImageTwo from '../../assests/verification-image-two.png';
 import VerificationImageThree from '../../assests/verification-image-three.png';
 import VerificationImageFour from '../../assests/verification-image-four.png';
-import { getCurrentIndex, animateFunction } from '../../helper';
+import { getCurrentIndex } from '../../helper';
 import { useMediaQuery } from '@/hook/useMediaQuery';
 import './style/verification.scss';
 
@@ -33,7 +33,6 @@ const verificationMsgList: VerificationListType[] = [
 const Verification = () => {
   const isSmall = useMediaQuery('(max-width:768px)');
   const { currentIndex } = getCurrentIndex(verificationMsgList);
-  // const { map, size, activeIndex } = animateFunction(verificationMsgList);
   return (
     <div className="verification">
       <div className="verification__images">
