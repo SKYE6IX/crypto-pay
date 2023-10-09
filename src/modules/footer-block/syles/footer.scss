@@ -6,17 +6,26 @@
   background: $dark-blue-color;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: $breakpoint-medium) {
+    padding: 56px 20px 32px 20px;
+  }
 }
 .footer__inner-container {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 100%;
+  }
 }
-
 .footer__headers {
   width: 1200px;
   display: flex;
   align-items: center;
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 .footer__logo-wrapper {
   width: 64px;
@@ -26,12 +35,19 @@
     max-height: 100%;
     border-radius: 16px;
   }
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 46px;
+    height: 46px;
+  }
 }
 .footer__nav-menu-wrapper {
   margin-left: auto;
   width: 844px;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: $breakpoint-medium) {
+    display: none;
+  }
 }
 .footer__nav-menu_list {
   display: flex;
@@ -59,6 +75,14 @@
     color: $white-color;
     cursor: pointer;
   }
+  @media screen and (max-width: $breakpoint-medium) {
+    button {
+      padding: 12px 32px;
+      font-size: 1.125rem;
+      font-weight: 450;
+      line-height: 21.6px;
+    }
+  }
 }
 .footer__copyright {
   width: 100%;
@@ -68,5 +92,10 @@
     font-weight: 500;
     line-height: 24px;
     color: $white-color;
+  }
+  @media screen and (max-width: $breakpoint-medium) {
+    font-size: 1.125rem;
+    font-weight: 450;
+    line-height: 21.6px;
   }
 }
