@@ -5,7 +5,7 @@ import AnonymousImageOne from '../../assests/anonymous-image-one.png';
 import AnonymousImageTwo from '../../assests/anonymous-image-two.png';
 import AnonymousImageThree from '../../assests/anonymous-image-three.png';
 import AnonymousImageFour from '../../assests/anonymous-image-four.png';
-import { getCurrentIndex } from '../../helper';
+import { GetCurrentIndex } from '../../helper';
 import { useMediaQuery } from '@/hook/useMediaQuery';
 import './styles/anonymous.scss';
 
@@ -29,7 +29,7 @@ const anonymousMsgList: AnonymousListType[] = [
 
 const Anonymous = () => {
   const isSmall = useMediaQuery('(max-width:768px)');
-  const { currentIndex } = getCurrentIndex(anonymousMsgList);
+  const { currentIndex } = GetCurrentIndex(anonymousMsgList);
   return (
     <div className="anonymous">
       <div className="anonymous__images">

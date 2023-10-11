@@ -8,7 +8,7 @@ import RightArrowIcon from '../../assests/right-arrow-icon.svg';
 import LeftArrowIcon from '../../assests/left-arrow-icon.svg';
 import RightArrowIconDark from '../../assests/right-arrow-icon-dark.svg';
 import LeftArrowIconDark from '../../assests/left-arrow-icon-dark.svg';
-import { animateFunction } from '../../helper';
+import { AnimateFunction } from '../../helper';
 import { useMediaQuery } from '@/hook/useMediaQuery';
 import './styles/exchange.scss';
 
@@ -31,7 +31,7 @@ const currenciesList: CurrenciesListType[] = [
   },
 ];
 const Exchange = () => {
-  const { map, size } = animateFunction(currenciesList);
+  const { map, size } = AnimateFunction(currenciesList);
   const isSmall = useMediaQuery('(max-width:768px)');
 
   return (

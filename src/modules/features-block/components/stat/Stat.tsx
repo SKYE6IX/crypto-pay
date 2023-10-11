@@ -4,7 +4,7 @@ import StatImageOne from '../../assests/stat-image-one.svg';
 import StatImageTwo from '../../assests/stat-image-two.svg';
 import StatImageThree from '../../assests/stat-image-three.svg';
 import StatImageFour from '../../assests/stat-image-four.svg';
-import { getCurrentIndex } from '../../helper';
+import { GetCurrentIndex } from '../../helper';
 import './styles/stat.scss';
 
 interface StatListType {
@@ -27,7 +27,7 @@ const statsImageList: StatListType[] = [
 ];
 
 const Stat = () => {
-  const { currentIndex } = getCurrentIndex(statsImageList);
+  const { currentIndex } = GetCurrentIndex(statsImageList);
   return (
     <div className="stat">
       <div className="stat__images">

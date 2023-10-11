@@ -1,11 +1,12 @@
+import React from 'react';
 import UsecasesImgOne from './assets/usecases-img-one.svg';
 import UsecasesImageTwo from './assets/usecases-img-two.svg';
 import UsecasesImageThree from './assets/usecases-img-three.svg';
 
 interface DescriptionData {
   image: any;
-  title: JSX.Element;
-  base_text: JSX.Element;
+  title: React.JSX.Element;
+  base_text: React.JSX.Element;
   pagination_number: string;
 }
 

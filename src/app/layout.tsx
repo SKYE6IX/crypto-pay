@@ -1,7 +1,8 @@
-import '../globalStyles/global.scss';
+import React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Provider } from '@/context/ThemeContext';
+import '../globalStyles/global.scss';
 
 export const metadata: Metadata = {
   title: 'Crypto Pay',

@@ -1,13 +1,13 @@
 'use client';
-import { useState, useEffect, useMemo, useRef } from 'react';
-
-export const getCurrentIndex = (arrayList: any[]) => {
+import { useState, useEffect, useMemo } from 'react';
+export const GetCurrentIndex = (arrayList: any[]) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const changeIndex = () => {
     const newIndex = currentIndex + 1;
     setCurrentIndex(newIndex);
   };
+
   useEffect(() => {
     const intervalID = setInterval(() => {
       if (currentIndex < arrayList.length - 1) {
@@ -19,14 +19,14 @@ export const getCurrentIndex = (arrayList: any[]) => {
     return () => {
       clearInterval(intervalID);
     };
-  }, [currentIndex]);
+  }, [currentIndex, arrayList.length]);
   return { currentIndex };
 };
 
-export const animateFunction = (arrayList: any[]) => {
+export const AnimateFunction = (arrayList: any[]) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const size = useMemo(() => arrayList.length, []);
-  const timer = useRef<NodeJS.Timeout | number>(-1);
+  const size = useMemo(() => arrayList.length, [arrayList.length]);
+  // const timer = useRef<NodeJS.Timeout | number>(-1);
   const map = useMemo(() => {
     const map = new Map<number, number>();
     const len = arrayList.length;
@@ -35,14 +35,15 @@ export const animateFunction = (arrayList: any[]) => {
       map.set((activeIndex + len - i) % len, --i);
     }
     return map;
-  }, [activeIndex]);
+  }, [activeIndex, arrayList.length]);
 
   useEffect(() => {
-    timer.current = setInterval(
+    const intervalId = setInterval(
       () => setActiveIndex((cur) => (cur + 1) % size),
       2000
     );
-    return () => clearInterval(timer.current as number);
-  }, [size]);
+    return () => clearInterval(intervalId);
+  }, [size, arrayList.length]);
+
   return { map, size, activeIndex };
 };
