@@ -6,6 +6,8 @@ import BtcIcon from '../../assests/btc-icon.png';
 import TonIcon from '../../assests/ton-icon.png';
 import RightArrowIcon from '../../assests/right-arrow-icon.svg';
 import LeftArrowIcon from '../../assests/left-arrow-icon.svg';
+import RightArrowIconDark from '../../assests/right-arrow-icon-dark.svg';
+import LeftArrowIconDark from '../../assests/left-arrow-icon-dark.svg';
 import { animateFunction } from '../../helper';
 import { useMediaQuery } from '@/hook/useMediaQuery';
 import './styles/exchange.scss';
@@ -59,9 +61,13 @@ const Exchange = () => {
         <div className="exchange__dollar-sign">
           <span>$</span>
         </div>
-        <div className="exchange__icon-wrapper">
+        <div className="exchange__icon-wrapper" data-hide-on-theme="dark">
           <Image src={RightArrowIcon} alt="right-arrow-icon" />
           <Image src={LeftArrowIcon} alt="left-arrow-icon" />
+        </div>
+        <div className="exchange__icon-wrapper" data-hide-on-theme="light">
+          <Image src={RightArrowIconDark} alt="right-arrow-icon" />
+          <Image src={LeftArrowIconDark} alt="left-arrow-icon" />
         </div>
       </div>
 

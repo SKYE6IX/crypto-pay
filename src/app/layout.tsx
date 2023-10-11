@@ -1,6 +1,7 @@
 import '../globalStyles/global.scss';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Provider } from '@/context/ThemeContext';
 
 export const metadata: Metadata = {
   title: 'Crypto Pay',
@@ -21,8 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body>{children}</body>
+    <html lang="en" className={inter.variable} suppressHydrationWarning={true}>
+      <body>
+        <Provider>{children}</Provider>
+      </body>
     </html>
   );
 }

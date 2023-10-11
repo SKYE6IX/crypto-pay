@@ -7,6 +7,7 @@ import ApiBlock from '../api-block/ApiBlock';
 import CommunityBlock from '../community-block/CommunityBlock';
 import Footer from '../footer-block/Footer';
 import './styles/page.scss';
+
 const Page = () => {
   return (
     <div className="page">

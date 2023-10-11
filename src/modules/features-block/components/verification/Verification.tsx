@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import IphoneFrame from '../../assests/iphone-frame.png';
 import IphoneScreen from '../../assests/iphone-screen.png';
+import IphoneScreenDark from '../../assests/iphone-screen-dark.png';
 import VerificationImageOne from '../../assests/verification-image-one.png';
 import VerificationImageTwo from '../../assests/verification-image-two.png';
 import VerificationImageThree from '../../assests/verification-image-three.png';
@@ -38,8 +39,17 @@ const Verification = () => {
       <div className="verification__images">
         <div className="verification__iphone-frame">
           <Image src={IphoneFrame} alt="iphone-frame" />
-          <div className="verification__iphone-screen">
+          <div
+            className="verification__iphone-screen"
+            data-hide-on-theme="dark"
+          >
             <Image src={IphoneScreen} alt="iphone-screen" />
+          </div>
+          <div
+            className="verification__iphone-screen"
+            data-hide-on-theme="light"
+          >
+            <Image src={IphoneScreenDark} alt="iphone-screen" />
           </div>
         </div>
         {verificationMsgList.map((msg, index) => {

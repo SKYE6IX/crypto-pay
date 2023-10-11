@@ -1,4 +1,14 @@
+// font
+$font-inter: var(--font-inter);
+
 //colors
+$text-color-100: var(--text-color-100);
+$text-color-80: var(--text-color-80);
+$btn-color-header: var(--btn-color-header);
+$white-color-60: var(--white-color-60);
+$feature-block-text-color: var(--feature-block-text-color);
+$instruction-block-number-color: var(--instruction-block-number-color);
+
 $text-dark-color: rgba(13, 13, 18, 1);
 $text-blue-color: rgba(65, 164, 223, 1);
 $text-deep-blue-color: rgba(41, 126, 226, 1);
@@ -7,14 +17,19 @@ $dark-blue-color: rgba(35, 35, 40, 1);
 $grey-color: rgba(255, 255, 255, 0.24);
 $backgroud-light: rgba(247, 249, 251, 1);
 
-// font
-$font-inter: var(--font-inter);
+// Background-colors
+$page-background: var(--background-page);
+$bg-btn-header: var(--bg-btn-header);
+$bg-color-feature-block: var(--bg-color-feature-block);
+$feature-block-dollar-sign-bg: var(--feature-block-dollar-sign-bg);
+$feature-block-exchange-sign-bg: var(--feature-block-exchange-sign-bg);
+$instruction-block-bg: var(--bg-color-feature-block);
+$instruction-block-number-bg: var(--instruction-block-number-bg);
+
+// Borders
+$feature-block-exchange-sign-border: var(--feature-block-exchange-sign-border);
 
 // break-point
 $breakpoint-small: 480px;
 $breakpoint-medium: 768px;
 $breakpoint-large: 1024px;
-
-// theme color
-$page-background-dark-mode: #0d0d12;
-$page-background-light-mode: #fff;

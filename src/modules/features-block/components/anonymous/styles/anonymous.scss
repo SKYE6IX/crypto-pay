@@ -1,10 +1,10 @@
 @use '@/globalStyles//variables' as *;
+@import '../../../styles/heading-text';
 
 %flex-styles {
   display: flex;
   flex-direction: column;
 }
-
 .anonymous {
   @extend %flex-styles;
   gap: 20px;
@@ -12,7 +12,7 @@
   height: 510px;
   padding: 42px;
   border-radius: 32px;
-  background: $backgroud-light;
+  background: $bg-color-feature-block;
   @media screen and (max-width: $breakpoint-medium) {
     width: 335px;
     height: 384px;
@@ -33,7 +33,6 @@
     border-radius: 16.3px;
   }
 }
-
 .anonymous__images-wrapper {
   position: absolute;
   width: 356.849px;
@@ -47,50 +46,8 @@
     height: 80px;
   }
 }
-
 .anonymous__header-texts {
   @extend %flex-styles;
   gap: 20px;
-  h3 {
-    margin: 0px;
-    font-size: 2.625rem;
-    font-weight: 629;
-    line-height: 46.2px;
-    letter-spacing: -1.26px;
-    color: $text-dark-color;
-  }
-  p {
-    margin: 0px;
-    color: rgba(17, 17, 17, 0.8);
-    font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 24px;
-    b,
-    span {
-      font-weight: 500;
-    }
-    span {
-      color: $text-blue-color;
-    }
-  }
-  @media screen and (max-width: $breakpoint-medium) {
-    h3 {
-      font-size: 1.75rem;
-      font-weight: 550;
-      line-height: 30.8px;
-      letter-spacing: -0.84px;
-    }
-    p {
-      font-size: 1.125rem;
-      font-weight: 350;
-      line-height: 21.6px;
-      span,
-      b {
-        font-weight: 450;
-      }
-      br {
-        display: none;
-      }
-    }
-  }
+  @extend .shared-styles;
 }

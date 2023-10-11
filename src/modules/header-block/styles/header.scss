@@ -42,7 +42,7 @@
   gap: 32px;
   li {
     list-style: none;
-    color: $text-dark-color;
+    color: $text-color-100;
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 24px;
@@ -78,13 +78,14 @@
 .header__button {
   border: none;
   border-radius: 900px;
-  background: rgba(41, 126, 226, 0.12);
+  border: 1px solid $white-color-60;
+  background: $bg-btn-header;
   padding: 18px 42px;
   font-family: $font-inter, sans-serif;
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 24px;
-  color: $text-deep-blue-color;
+  color: $btn-color-header;
   cursor: pointer;
   @media screen and (max-width: $breakpoint-medium) {
     padding: 12px 32px;

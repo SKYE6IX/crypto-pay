@@ -57,7 +57,7 @@ const Currencies = () => {
   return (
     <div className="currencies" ref={ref}>
       <div className="currencies__header-texts">
-        <h2>Accept a wide range of cryptocurrencies</h2>
+        <h3>Accept a wide range of cryptocurrencies</h3>
         <p>
           Bill any supported cryptocurrencies with asset parameter in
           <span> GetInvoice </span>

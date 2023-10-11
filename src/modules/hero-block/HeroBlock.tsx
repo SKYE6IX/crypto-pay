@@ -6,6 +6,7 @@ import BotFour from './assets/bot-4.jpeg';
 import BotFive from './assets/bot-5.jpeg';
 import IphoneFrame from './assets/iphone-frame.png';
 import IphoneScreen from './assets/iphone-screen.jpeg';
+import IphoneScreenDark from './assets/iphone-screen-dark.jpeg';
 import './styles/hero-block.scss';
 
 const HeroBlock = () => {
@@ -57,8 +58,11 @@ const HeroBlock = () => {
         <div className="hero-block__image">
           <div className="iphone-frame">
             <Image src={IphoneFrame} alt="iphone-frame" />
-            <div className="iphone-screen">
+            <div className="iphone-screen" data-hide-on-theme="dark">
               <Image src={IphoneScreen} alt="iphone-screen" />
+            </div>
+            <div className="iphone-screen" data-hide-on-theme="light">
+              <Image src={IphoneScreenDark} alt="iphone-screen" />
             </div>
           </div>
         </div>

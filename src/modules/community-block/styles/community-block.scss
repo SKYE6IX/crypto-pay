@@ -11,7 +11,7 @@
   align-items: center;
   gap: 40px;
   border-radius: 0px 0px 40px 40px;
-  background: $white-color;
+  background: $page-background;
   @media screen and (max-width: $breakpoint-medium) {
     padding: 12px 20px 40px 20px;
   }
@@ -28,12 +28,12 @@
     font-weight: 629;
     line-height: 61.6px;
     letter-spacing: -1.68px;
-    color: $text-dark-color;
+    color: $text-color-100;
     text-align: center;
   }
   p {
     margin: 0px;
-    color: rgba(17, 17, 17, 0.8);
+    color: $text-color-80;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 24px;
@@ -85,7 +85,7 @@
     font-weight: 500;
     line-height: 24px;
     text-align: center;
-    color: rgba(17, 17, 17, 0.8);
+    color: $text-color-80;
   }
   @media screen and (max-width: $breakpoint-medium) {
     width: 103px;

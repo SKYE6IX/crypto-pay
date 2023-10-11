@@ -44,7 +44,7 @@ const Stat = () => {
         ))}
       </div>
       <div className="stat__header-text">
-        <h4>Payment statistics</h4>
+        <h3>Payment statistics</h3>
         <p>
           Open <span>@CryptoBot</span>, go to <span>Crypto Pay</span> and{' '}
           <span>My Apps</span>, <br />

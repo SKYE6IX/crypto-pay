@@ -1,5 +1,56 @@
 $font-family: var(--font-inter);
 
+:root {
+  --text-color-100: rgba(13, 13, 18, 1);
+  --text-color-80: rgba(17, 17, 17, 0.8);
+  --bg-btn-header: rgba(41, 126, 226, 0.12);
+  --btn-color-header: rgba(41, 126, 226, 1);
+  --background-page: rgba(255, 255, 255, 1);
+  --bg-color-feature-block: rgba(247, 249, 251, 1);
+  --feature-block-text-color: rgba(17, 17, 17, 0.4);
+  --feature-block-dollar-sign-bg: linear-gradient(
+      220deg,
+      #010417 10.26%,
+      #2b333f 84.25%
+    ),
+    linear-gradient(46deg, #000 15.89%, #434343 171.16%);
+  --feature-block-exchange-sign-border: 1px solid #fff;
+  --feature-block-exchange-sign-bg: rgba(255, 255, 255, 0.6);
+  --instruction-block-number-bg: linear-gradient(
+      220deg,
+      #010417 10.26%,
+      #2b333f 84.25%
+    ),
+    linear-gradient(46deg, #000 15.89%, #434343 171.16%);
+  --instruction-block-number-color: rgba(255, 255, 255, 1);
+}
+
+[data-theme='dark'] {
+  --text-color-100: rgba(255, 255, 255, 1);
+  --text-color-80: rgba(255, 255, 255, 0.8);
+  --white-color-60: rgba(255, 255, 255, 0.6);
+  --bg-btn-header: #0d0d12;
+  --btn-color-header: rgba(255, 255, 255, 1);
+  --background-page: #0d0d12;
+  --bg-color-feature-block: rgba(24, 24, 29, 1);
+  --feature-block-text-color: rgba(255, 255, 255, 0.8);
+  --feature-block-dollar-sign-bg: linear-gradient(
+    78deg,
+    #181818 -16.92%,
+    #2f2f2f 84.29%
+  );
+  --feature-block-exchange-sign-border: 1px solid #191919;
+  --feature-block-exchange-sign-bg: rgba(17, 17, 17, 0.4);
+  --instruction-block-number-bg: rgba(255, 255, 255, 1);
+  --instruction-block-number-color: rgba(13, 13, 18, 1);
+}
+
+// display diffrent image on each theme
+[data-theme='dark'] [data-hide-on-theme='dark'],
+[data-theme='light'] [data-hide-on-theme='light'] {
+  display: none;
+}
+
 html {
   box-sizing: border-box;
   font-size: 16px;
