@@ -18,6 +18,7 @@
   display: flex;
   position: relative;
   align-items: center;
+  overflow: clip;
   @media screen and (max-width: $breakpoint-medium) {
     flex-direction: column-reverse;
     width: 335px;

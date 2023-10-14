@@ -1,9 +1,9 @@
 'use client';
 import Image from 'next/image';
-import StatImageOne from '../../assests/stat-image-one.svg';
-import StatImageTwo from '../../assests/stat-image-two.svg';
-import StatImageThree from '../../assests/stat-image-three.svg';
-import StatImageFour from '../../assests/stat-image-four.svg';
+import StatImageOne from '../../assests/stat-image-one.webp';
+import StatImageTwo from '../../assests/stat-image-two.webp';
+import StatImageThree from '../../assests/stat-image-three.webp';
+import StatImageFour from '../../assests/stat-image-four.webp';
 import { GetCurrentIndex } from '../../helper';
 import './styles/stat.scss';
 

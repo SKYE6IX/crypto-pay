@@ -1,7 +1,7 @@
 import React from 'react';
-import UsecasesImgOne from './assets/usecases-img-one.svg';
-import UsecasesImageTwo from './assets/usecases-img-two.svg';
-import UsecasesImageThree from './assets/usecases-img-three.svg';
+import UsecasesImgOne from './assets/usecases-img-one.jpg';
+import UsecasesImageTwo from './assets/usecases-img-two.jpg';
+import UsecasesImageThree from './assets/usecases-img-three.jpg';
 
 interface DescriptionData {
   image: any;

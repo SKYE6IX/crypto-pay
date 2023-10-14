@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import StepOneImage from './assets/step-one-image.svg';
-import StepTwoImage from './assets/step-two-image.svg';
-import StepThreeImage from './assets/step-three-image.svg';
-import './styles/insruction.scss';
+import StepOneImageTop from './assets/step-one-image-top.webp';
+import StepOneImageBottom from './assets/step-one-image-bottom.webp';
+import StepTwoImage from './assets/step-two-image.webp';
+import StepThreeImage from './assets/step-three-image.webp';
+import './styles/instruction.scss';
 
 const Insruction = () => {
   return (
@@ -40,7 +41,18 @@ const Insruction = () => {
         </div>
 
         <div className="instruction__step-image">
-          <Image src={StepOneImage} alt="step-one-image" />
+          <div className="instruction__step-image-one">
+            <Image
+              src={StepOneImageTop}
+              alt="step-one-image"
+              className="top-image"
+            />
+            <Image
+              src={StepOneImageBottom}
+              alt="step-one-image"
+              className="bottom-image"
+            />
+          </div>
         </div>
       </div>
 
@@ -71,7 +83,9 @@ const Insruction = () => {
           </div>
         </div>
         <div className="instruction__step-image">
-          <Image src={StepTwoImage} alt="step-two-image" />
+          <div className="instruction__step-image-two">
+            <Image src={StepTwoImage} alt="step-two-image" />
+          </div>
         </div>
       </div>
 
@@ -102,8 +116,10 @@ const Insruction = () => {
             </div>
           </div>
         </div>
-        <div className="instruction__step-image">
-          <Image src={StepThreeImage} alt="step-three-image" />
+        <div className="instruction__step-image ">
+          <div className="instruction__step-image-three">
+            <Image src={StepThreeImage} alt="step-three-image" />
+          </div>
         </div>
       </div>
     </section>

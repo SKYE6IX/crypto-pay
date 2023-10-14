@@ -29,7 +29,6 @@ const ApiBlock = () => {
             </div>
           </div>
         </div>
-
         <div className="api-block-image">
           <div className="api-block-image__wrapper">
             <Image src={isSmall ? BgImageSmall : BgImage} alt="bg-image" />
@@ -44,5 +43,4 @@ const ApiBlock = () => {
     </section>
   );
 };
-
 export default ApiBlock;

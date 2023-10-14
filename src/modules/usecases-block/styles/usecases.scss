@@ -27,15 +27,21 @@
 }
 .usecases-block__images {
   margin-right: 122px;
+  width: 488px;
+  height: 488px;
   img {
     transition: all ease-in-out 5s;
     max-width: 100%;
     max-height: 100%;
+    border-radius: 40px;
   }
   @media screen and (max-width: $breakpoint-medium) {
     width: 335px;
     height: 335px;
     margin: 0px;
+    img {
+      border-radius: 30px;
+    }
   }
 }
 .usecases-block__description {
