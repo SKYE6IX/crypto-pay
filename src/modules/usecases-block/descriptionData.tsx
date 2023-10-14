@@ -9,7 +9,6 @@ interface DescriptionData {
   base_text: React.JSX.Element;
   pagination_number: string;
 }
-
 export const descriptionData: DescriptionData[] = [
   {
     pagination_number: '01',

@@ -5,7 +5,7 @@ import StepTwoImage from './assets/step-two-image.webp';
 import StepThreeImage from './assets/step-three-image.webp';
 import './styles/instruction.scss';
 
-const Insruction = () => {
+const Instruction = () => {
   return (
     <section className="instructuon">
       <div className="instruction__header">
@@ -125,4 +125,4 @@ const Insruction = () => {
     </section>
   );
 };
-export default Insruction;
+export default Instruction;

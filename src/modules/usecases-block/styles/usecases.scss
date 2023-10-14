@@ -29,11 +29,18 @@
   margin-right: 122px;
   width: 488px;
   height: 488px;
+  position: relative;
   img {
-    transition: all ease-in-out 5s;
     max-width: 100%;
     max-height: 100%;
     border-radius: 40px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+    transition: z-index ease-in 0.5s;
   }
   @media screen and (max-width: $breakpoint-medium) {
     width: 335px;
@@ -148,7 +155,6 @@
     color: $white-color;
   }
 }
-
 .stick-container {
   height: 100%;
   display: inline-flex;
@@ -160,7 +166,6 @@
     width: 100%;
   }
 }
-
 %stick-style {
   width: 4px;
   height: 108.66667px;
@@ -175,7 +180,6 @@
   @extend %stick-style;
   background-color: $grey-color;
 }
-
 .usecases-block__pagination-stick_active {
   @extend %stick-style;
   position: absolute;

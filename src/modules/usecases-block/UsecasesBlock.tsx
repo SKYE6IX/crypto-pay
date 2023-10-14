@@ -15,10 +15,14 @@ const UsecasesBlock = () => {
       <div className="usecases-block__inner-container">
         <div className="usecases-block__content">
           <div className="usecases-block__images">
-            <Image
-              src={descriptionData[currentIndex].image}
-              alt="usecases-image"
-            />
+            {descriptionData.map((data, index) => (
+              <Image
+                key={index}
+                src={data.image}
+                alt="usecases-image"
+                style={{ zIndex: currentIndex === index ? 2 : 1 }}
+              />
+            ))}
           </div>
 
           <div className="usecases-block__description">

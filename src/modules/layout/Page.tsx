@@ -2,7 +2,7 @@ import Header from '../header-block/Header';
 import HeroBlock from '../hero-block/HeroBlock';
 import UsecasesBlock from '../usecases-block/UsecasesBlock';
 import FeatureBlock from '../features-block/FeaturesBlock';
-import Insruction from '../insruction-block/Instruction';
+import Instruction from '../instruction-block/Instruction';
 import ApiBlock from '../api-block/ApiBlock';
 import CommunityBlock from '../community-block/CommunityBlock';
 import Footer from '../footer-block/Footer';
@@ -15,7 +15,7 @@ const Page = () => {
       <HeroBlock />
       <UsecasesBlock />
       <FeatureBlock />
-      <Insruction />
+      <Instruction />
       <ApiBlock />
       <CommunityBlock />
       <Footer />
