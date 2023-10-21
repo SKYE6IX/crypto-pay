@@ -1,9 +1,8 @@
-import Image from 'next/image';
-import JsIcon from './assets/javascript-logo.svg';
-import NetIcon from './assets/net-logo.svg';
-import PhpIcon from './assets/php-logo.svg';
-import PythonIcon from './assets/python-logo.svg';
-import GoIcon from './assets/go-logo.svg';
+import JavaScriptIcon from './icons/JavaScriptIcon';
+import NetIcon from './icons/NetIcon';
+import PhpIcon from './icons/PhpIcon';
+import PythonIcon from './icons/PythonIcon';
+import GoIcon from './icons/GoIcon';
 import './styles/community-block.scss';
 
 const CommunityBlock = () => {
@@ -19,23 +18,23 @@ const CommunityBlock = () => {
         </div>
         <div className="community-block__icons">
           <div className="community-block__icons-wrapper">
-            <Image src={JsIcon} alt="js-icon" />
+            <JavaScriptIcon />
             <span>crypto-pay-api</span>
           </div>
           <div className="community-block__icons-wrapper">
-            <Image src={NetIcon} alt="net-icon" />
+            <NetIcon />
             <span>CryptoPay</span>
           </div>
           <div className="community-block__icons-wrapper">
-            <Image src={PhpIcon} alt="php-icon" />
+            <PhpIcon />
             <span>crypto-pay-api</span>
           </div>
           <div className="community-block__icons-wrapper">
-            <Image src={PythonIcon} alt="pyhton-icon" />
+            <PythonIcon />
             <span>aiocrypto pay</span>
           </div>
           <div className="community-block__icons-wrapper">
-            <Image src={GoIcon} alt="go-icon" />
+            <GoIcon />
             <span>cryptobot-sdk-golang</span>
           </div>
         </div>
