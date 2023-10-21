@@ -32,7 +32,7 @@ const currenciesList: CurrenciesListType[] = [
 ];
 const Exchange = () => {
   const { map, size } = AnimateFunction(currenciesList);
-  const isSmall = useMediaQuery('(max-width:768px)');
+  const isSmallAndMedium = useMediaQuery('(max-width:1024px)');
 
   return (
     <div className="exchange">
@@ -46,7 +46,9 @@ const Exchange = () => {
                 key={index}
                 className="currency-wrapper"
                 animate={{
-                  left: isSmall ? 0 - 0.7 * factor * 42 : 0 - 0.7 * factor * 62,
+                  left: isSmallAndMedium
+                    ? 0 - 0.7 * factor * 42
+                    : 0 - 0.7 * factor * 62,
                   zIndex: map.get(index),
                 }}
                 transition={{

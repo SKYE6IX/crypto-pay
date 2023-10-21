@@ -7,7 +7,8 @@ import { useMediaQuery } from '@/hook/useMediaQuery';
 import './styles/commision.scss';
 
 const Commission = () => {
-  const isSmall = useMediaQuery('(max-width:768px)');
+  const isSmall = useMediaQuery('(max-width:567px)');
+  const isMedium = useMediaQuery('(max-width:1024px)');
   return (
     <div className="commission">
       <div className="commission__image">
@@ -37,9 +38,13 @@ const Commission = () => {
           animate={{
             right: isSmall
               ? ['-10px', '5.51px', '-10px']
+              : isMedium
+              ? ['-15px', '5.51px', '-15px']
               : ['37.02px', '58.51px', '37.02px'],
             bottom: isSmall
               ? ['-20px', '0.79px', '-20px']
+              : isMedium
+              ? ['-25px', '0.79px', '-25px']
               : ['5.59px', '22.79px', '5.59px'],
           }}
           transition={{

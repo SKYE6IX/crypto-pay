@@ -15,6 +15,12 @@
   @media screen and (max-width: $breakpoint-medium) {
     width: 100%;
     padding: 32px;
+    border-radius: 24px;
+  }
+  @media screen and (max-width: $breakpoint-small) {
+    width: 100%;
+    padding: 32px;
+    border-radius: 24px;
     flex-direction: column-reverse;
   }
 }
@@ -22,7 +28,7 @@
   @extend %flex-styles;
   gap: 20px;
   @extend .shared-styles;
-  @media screen and (max-width: $breakpoint-medium) {
+  @media screen and (max-width: $breakpoint-small) {
     gap: 16px;
   }
 }
@@ -30,7 +36,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  @media screen and (max-width: $breakpoint-medium) {
+  @media screen and (max-width: $breakpoint-small) {
     width: 271px;
     height: 122px;
     flex-wrap: wrap;
@@ -52,6 +58,12 @@
     text-transform: uppercase;
   }
   @media screen and (max-width: $breakpoint-medium) {
+    img {
+      width: 56px;
+      height: 56px;
+    }
+  }
+  @media screen and (max-width: $breakpoint-small) {
     img {
       width: 56px;
       height: 56px;

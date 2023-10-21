@@ -12,20 +12,24 @@
   align-items: center;
   width: 1200px;
   @media screen and (max-width: $breakpoint-medium) {
+    width: fit-content;
+    justify-content: center;
+  }
+  @media screen and (max-width: $breakpoint-small) {
     width: 335px;
   }
 }
 .header__logo-wrapper {
   width: 64px;
   height: 64px;
-  @media screen and (max-width: $breakpoint-medium) {
-    width: 46px;
-    height: 46px;
-  }
   img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 16px;
+  }
+  @media screen and (max-width: $breakpoint-medium) {
+    width: 46px;
+    height: 46px;
   }
 }
 .header__nav-menu-wrapper {
@@ -34,6 +38,10 @@
   display: flex;
   justify-content: center;
   @media screen and (max-width: $breakpoint-medium) {
+    width: 500px;
+    margin: 0px;
+  }
+  @media screen and (max-width: $breakpoint-small) {
     display: none;
   }
 }
@@ -47,12 +55,18 @@
     font-weight: 500;
     line-height: 24px;
   }
+  @media screen and (max-width: $breakpoint-medium) {
+    gap: 25px;
+    li {
+      font-size: 1rem;
+    }
+  }
 }
 .header__button-wrapper {
   display: flex;
   gap: 8px;
   align-items: center;
-  @media screen and (max-width: $breakpoint-medium) {
+  @media screen and (max-width: $breakpoint-small) {
     margin-left: auto;
   }
 }
@@ -74,7 +88,6 @@
     }
   }
 }
-
 .header__button {
   border: none;
   border-radius: 900px;
@@ -88,6 +101,11 @@
   color: $btn-color-header;
   cursor: pointer;
   @media screen and (max-width: $breakpoint-medium) {
+    padding: 12px 32px;
+    font-size: 1rem;
+    line-height: 21.6px;
+  }
+  @media screen and (max-width: $breakpoint-small) {
     padding: 12px 32px;
     font-size: 1.125rem;
     line-height: 21.6px;

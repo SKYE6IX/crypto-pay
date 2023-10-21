@@ -13,7 +13,6 @@ const Instruction = () => {
           Quick start using <span>Crypto Pay</span>
         </h2>
       </div>
-
       <div className="instruction__step instruction__step-one">
         <div className="instruction__step-header">
           <div className="instruction__step-header-number">
@@ -39,7 +38,6 @@ const Instruction = () => {
             </div>
           </div>
         </div>
-
         <div className="instruction__step-image">
           <div className="instruction__step-image-one">
             <Image
@@ -55,7 +53,6 @@ const Instruction = () => {
           </div>
         </div>
       </div>
-
       <div className="instruction__step instruction__step-two">
         <div className="instruction__step-header">
           <div className="instruction__step-header-number">
@@ -88,7 +85,6 @@ const Instruction = () => {
           </div>
         </div>
       </div>
-
       <div className="instruction__step instruction__step-three">
         <div className="instruction__step-header">
           <div className="instruction__step-header-number">

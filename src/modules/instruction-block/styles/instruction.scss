@@ -10,6 +10,11 @@
   align-items: center;
   gap: 40px;
   @media screen and (max-width: $breakpoint-medium) {
+    margin-top: 80px;
+    padding: 80px 20px;
+    gap: 24px;
+  }
+  @media screen and (max-width: $breakpoint-small) {
     margin-top: 0px;
     padding: 32px 20px;
     gap: 24px;
@@ -28,6 +33,14 @@
     }
   }
   @media screen and (max-width: $breakpoint-medium) {
+    h2 {
+      font-size: 2rem;
+      font-weight: 550;
+      line-height: 35.2px;
+      letter-spacing: -0.96px;
+    }
+  }
+  @media screen and (max-width: $breakpoint-small) {
     width: 250px;
     h2 {
       font-size: 2rem;
@@ -42,6 +55,9 @@
   display: flex;
   gap: 122px;
   @media screen and (max-width: $breakpoint-medium) {
+    gap: 40px;
+  }
+  @media screen and (max-width: $breakpoint-small) {
     width: 335px;
     flex-direction: column-reverse;
     align-items: center;
@@ -68,7 +84,7 @@
       br {
         display: none;
       }
-      @media screen and (max-width: $breakpoint-medium) {
+      @media screen and (max-width: $breakpoint-small) {
         br {
           display: block;
         }
@@ -80,7 +96,7 @@
       color: $text-blue-color;
     }
   }
-  @media screen and (max-width: $breakpoint-medium) {
+  @media screen and (max-width: $breakpoint-small) {
     flex-direction: column-reverse;
   }
 }
@@ -96,6 +112,10 @@
   justify-content: center;
   gap: 20px;
   @media screen and (max-width: $breakpoint-medium) {
+    width: 335px;
+    gap: 16px;
+  }
+  @media screen and (max-width: $breakpoint-small) {
     width: 100%;
     flex-direction: row;
     gap: 16px;
@@ -105,7 +125,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  @media screen and (max-width: $breakpoint-medium) {
+  @media screen and (max-width: $breakpoint-small) {
     gap: 16px;
   }
 }
@@ -215,7 +235,6 @@
     border-radius: 24px;
   }
 }
-
 .instruction__step-image-one {
   width: 392px;
   img {

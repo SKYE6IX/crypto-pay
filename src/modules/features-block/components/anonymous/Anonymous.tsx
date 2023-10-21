@@ -28,7 +28,7 @@ const anonymousMsgList: AnonymousListType[] = [
 ];
 
 const Anonymous = () => {
-  const isSmall = useMediaQuery('(max-width:768px)');
+  const isSmall = useMediaQuery('(max-width:1024px)');
   const { currentIndex } = GetCurrentIndex(anonymousMsgList);
   return (
     <div className="anonymous">

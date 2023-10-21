@@ -32,7 +32,8 @@ const verificationMsgList: VerificationListType[] = [
 ];
 
 const Verification = () => {
-  const isSmall = useMediaQuery('(max-width:768px)');
+  const isSmall = useMediaQuery('(max-width:567px)');
+  const isMedium = useMediaQuery('(max-width:1024px)');
   const { currentIndex } = GetCurrentIndex(verificationMsgList);
   return (
     <div className="verification">
@@ -62,16 +63,21 @@ const Verification = () => {
                   ? currentIndex === index
                     ? ''
                     : '195px'
+                  : isMedium
+                  ? currentIndex === index
+                    ? ''
+                    : '233px'
                   : currentIndex === index
                   ? ''
                   : '380px',
-                translateY: isSmall
-                  ? currentIndex === index
-                    ? ['-1px', '7px']
-                    : '-1px'
-                  : currentIndex === index
-                  ? ['-1px', '10px']
-                  : '-1px',
+                translateY:
+                  isSmall || isMedium
+                    ? currentIndex === index
+                      ? ['-1px', '7px']
+                      : '-1px'
+                    : currentIndex === index
+                    ? ['-1px', '10px']
+                    : '-1px',
                 zIndex: currentIndex === index ? 2 : 1,
                 opacity: currentIndex === index ? [0.5, 1] : 0.5,
               }}

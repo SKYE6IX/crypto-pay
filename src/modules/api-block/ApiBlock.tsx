@@ -8,23 +8,25 @@ import { useMediaQuery } from '@/hook/useMediaQuery';
 import './styles/api-block.scss';
 
 const ApiBlock = () => {
-  const isSmall = useMediaQuery('(max-width:768px)');
+  const isSmall = useMediaQuery('(max-width:567px)');
   return (
     <section className="api-block">
       <div className="api-block__inner-container">
-        <div className="api-block__header-wrapper">
-          <div className="api-block__header-text">
-            <div className="api-block__header-text-title">
-              <h2>Crypto Pay API</h2>
+        <div className="header-mobile-relative-wrapper">
+          <div className="api-block__header-wrapper">
+            <div className="api-block__header-text">
+              <div className="api-block__header-text-title">
+                <h2>Crypto Pay API</h2>
+              </div>
+              <div className="api-block__header-text-base-text">
+                <p>
+                  Explore available methods and types <br />
+                  and integrate them in any programming <br />
+                  language.
+                </p>
+              </div>
             </div>
-            <div className="api-block__header-text-base-text">
-              <p>
-                Explore available methods and types <br />
-                and integrate them in any programming <br />
-                language.
-              </p>
-            </div>
-            <div className="api-block__header-text-button">
+            <div className="api-block__header-button">
               <button>Open API Docs</button>
             </div>
           </div>
