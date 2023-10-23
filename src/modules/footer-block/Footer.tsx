@@ -1,7 +1,13 @@
 import Image from 'next/image';
+import { Link } from 'react-scroll';
 import cryptoLogo from './crypto-pay-logo.jpeg';
 import './syles/footer.scss';
 const Footer = () => {
+  const navList = [
+    { name: 'Use cases', key: 'use_cases' },
+    { name: 'Features', key: 'features' },
+    { name: 'How to start', key: 'how_to_start' },
+  ];
   return (
     <footer className="footer">
       <div className="footer__inner-container">
@@ -11,9 +17,11 @@ const Footer = () => {
           </div>
           <div className="footer__nav-menu-wrapper">
             <ul className="footer__nav-menu_list">
-              <li>Use cases</li>
-              <li>Features</li>
-              <li>How to start</li>
+              {navList.map((list) => (
+                <li key={list.key}>
+                  <Link to={list.key}>{list.name}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="footer__button-wrapper">

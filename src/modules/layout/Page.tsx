@@ -1,3 +1,5 @@
+'use client';
+import { Element } from 'react-scroll';
 import Header from '../header-block/Header';
 import HeroBlock from '../hero-block/HeroBlock';
 import UsecasesBlock from '../usecases-block/UsecasesBlock';
@@ -13,9 +15,15 @@ const Page = () => {
     <div className="page">
       <Header />
       <HeroBlock />
-      <UsecasesBlock />
-      <FeatureBlock />
-      <Instruction />
+      <Element name="use_cases">
+        <UsecasesBlock />
+      </Element>
+      <Element name="features">
+        <FeatureBlock />
+      </Element>
+      <Element name="how_to_start">
+        <Instruction />
+      </Element>
       <ApiBlock />
       <CommunityBlock />
       <Footer />
