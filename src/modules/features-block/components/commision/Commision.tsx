@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
 import TreeIcon from '../../assests/tree-icon.svg';
 import CursorIcon from '../../assests/cursor-icon.svg';
 import { useMediaQuery } from '@/hook/useMediaQuery';
@@ -9,6 +10,17 @@ import './styles/commision.scss';
 const Commission = () => {
   const isSmall = useMediaQuery('(max-width:567px)');
   const isMedium = useMediaQuery('(max-width:1024px)');
+  const { resolvedTheme } = useTheme();
+  const getBackground = () => {
+    const isDark = resolvedTheme === 'dark';
+    const lightBg =
+      'linear-gradient(240deg, rgba(41, 126, 226, 0.18) 3.57%, rgba(24, 97, 182, 0.18) 86.24%)';
+    const darkBg = 'linear-gradient(233deg, #9FCCFA -20.48%, #0974F1 97.38%)';
+    if (isDark) {
+      return darkBg;
+    }
+    return lightBg;
+  };
   return (
     <div className="commission">
       <div className="commission__image">
@@ -18,7 +30,7 @@ const Commission = () => {
             scale: [1, 1.1, 1],
             background: [
               'linear-gradient(240deg,rgba(41, 126, 226, 0.12) 3.57%,rgba(24, 97, 182, 0.12) 86.24%)',
-              'linear-gradient(240deg, rgba(41, 126, 226, 0.18) 3.57%, rgba(24, 97, 182, 0.18) 86.24%)',
+              getBackground(),
               'linear-gradient(240deg,rgba(41, 126, 226, 0.12) 3.57%,rgba(24, 97, 182, 0.12) 86.24%)',
             ],
           }}
